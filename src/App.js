@@ -1,25 +1,42 @@
-import logo from './logo.svg';
+import React, {Component} from "react";
 import './App.css';
+import Form from "./components/Form"
+import Products from "./components/Products"
 
-function App() {
+
+const API_KEY="442c401e11a142a796509f00242e9e3a"
+
+
+class App extends Component {
+  state={
+    products:[]
+  }
+  getProduct= async (e) => {
+
+    const product=e.target.elements.product.value;
+    //prevent full page refresh
+    e.preventDefault();
+    const api_call= await fetch(`https://api.spoonacular.com/food/products/search?query=${product}&apiKey=${API_KEY}`)
+
+    const data = await api_call.json()
+    this.setState({products: data.products});
+    console.log(this.state.products)
+  }
+  render(){
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="App-header">
+          <h1 className="App-title">Products</h1>
+                <Form getProduct={this.getProduct}/>
+              
+      </div>
+      <div className="wrapper">
+      {/* pass state products through prop */}
+      <Products products={this.state.products}/>
+      </div>
     </div>
   );
+    }
 }
 
 export default App;

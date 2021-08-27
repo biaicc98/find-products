@@ -14,13 +14,12 @@
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  background-color: #9b7cb4;
+  height: 100px;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  justify-content: space-evenly;
+  font-size: 30px;
   color: white;
 }
 
@@ -28,6 +27,17 @@
   color: #61dafb;
 }
 
+.wrapper{
+  width: 70%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  
+}
+.productCard{
+
+}
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);

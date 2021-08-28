@@ -30,10 +30,9 @@ class App extends Component {
                 <Form getProduct={this.getProduct}/>
               
       </div>
-      <div className="wrapper">
+      
       {/* pass state products through prop */}
       <Products products={this.state.products}/>
-      </div>
     </div>
   );
     }

@@ -23,10 +23,11 @@
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
-}
 
+
+.product{
+  margin-top:100px ;
+}
 .wrapper{
   width: 100%;
   display: flex;
@@ -37,7 +38,7 @@
   align-items: center;
   padding: 10px;
   overflow: hidden;
-  
+  box-sizing: border-box;
 }
 .productCard{
   
@@ -64,11 +65,11 @@
   padding: 5px;
   font-weight: bold;
   border-radius: 5px;
-
+   text-decoration: none;
 }
 .viewProduct:hover{
   background-color: #9b7cb4;
-  color: white;
+  color: white; 
   cursor: pointer;
 
 }
@@ -86,6 +87,49 @@
   
 }
 
+.link-styling{
+  color: #2e2441;
+ text-align: center;
+  font-size: 15px;
+  font-weight: bold;
+   text-decoration: none;
+}
+.link-styling:hover{
+  color: #2e2441;
+  cursor: pointer;
+}
+.link-styling:link{
+  color: #2e2441;
+
+ text-align: center;
+  font-size: 15px;
+  font-weight: bold;
+   text-decoration: none;
+}
+.link-styling:visited{
+  color: #2e2441;
+
+ text-align: center;
+  font-size: 15px;
+  font-weight: bold;
+   text-decoration: none;
+}
+.link-styling:active{
+  color: #2e2441;
+
+ text-align: center;
+  font-size: 15px;
+  font-weight: bold;
+   text-decoration: none;
+}
+.link-styling:focus{
+  color: #2e2441;
+
+ text-align: center;
+  font-size: 15px;
+  font-weight: bold;
+   text-decoration: none;
+}
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
